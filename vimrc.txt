@@ -1,8 +1,9 @@
-" My configs
+" My configs 
 set nu          " sets numbers
-color elflord   " sets color
+color elflord
 set expandtab   " expands tabs to spaces
 set tabstop=4   " sets tabsize to 4
+set shiftwidth=4    " makes gg=G work"
 set colorcolumn=81  " puts grey line at 80 char
 set textwidth=80    " wraps text at 80 chars
 highlight ColorColumn ctermbg=darkgray 
@@ -39,8 +40,17 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'scrooloose/syntastic'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/NERDTree'
+Plugin 'jiangmiao/auto-pairs'
 map <C-n> :NERDTreeToggle<CR>
+map <F7> mzgg=G`z`
 Plugin 'bling/vim-airline'
+Bundle 'joonty/vim-do.git'
+
+" Color Schemes
+Plugin 'tomasr/molokai'
+Plugin 'flazz/vim-colorschemes'
+Plugin 'chriskempson/tomorrow-theme'
+
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
